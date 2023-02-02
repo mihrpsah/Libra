@@ -104,7 +104,9 @@ input, button{
    border-radius: 5px;
 }
  
-
+.Delete:hover, .Read-Unread:hover{
+    opacity: 0.5;
+}
 
 
 
