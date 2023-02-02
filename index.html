@@ -11,32 +11,44 @@
 
 <body>
     <main class="app">
-        <div class="segment-one">
-            <h1>Libra</h1>
-            <h2>Your personal reading assistant</h2>
-            <form action="" class="add-book" data-add-book>
+        <div class="overlay">
+            <div class="segment-one">
+                <h1>Libra</h1>
+                <h2>Your personal reading assistant</h2>
+                <form action="" class="add-form" data-add-book>
 
-                <h4>Name of the book:-</h3>
-                    <input type="text" name="book-name" id="book-name" placeholder="Name of the book">
-                <h4>Name of the author:-</h3>
-                    <input type="text" name="author-name" id="author-name" placeholder="Author of the book">
-                <div class="options" data-options>
-                    <label>
-                        <input type="radio" name="status" id="read">
-                        <span class="bubble read"></span>
-                        <div>read</div>
-                    </label>
-                    <label>
-                        <input type="radio" name="status" id="unread">
-                        <span class="bubble unread"></span>
-                        <div>unread</div>
-                    </label>
-                </div>
+                    <h4>Name of the book:-</h3>
+                        <input type="text" name="book-name" id="book-name" placeholder="Name of the book">
+                        <h4>Name of the author:-</h3>
+                            <input type="text" name="author-name" id="author-name" placeholder="Author of the book">
+                            <div class="options" data-options>
+                                <label>
+                                    <input type="radio" name="status" id="read">
+                                    <span class="bubble read"></span>
+                                    <div>read</div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="status" id="unread">
+                                    <span class="bubble unread"></span>
+                                    <div>unread</div>
+                                </label>
+                            </div>
+                            <button type="submit">Add</button>
 
-            </form>
+                </form>
+            </div>
         </div>
-        <div class="segment-two">
 
+        <div class="segment-two">
+            <div class="book" data-book>
+                <h3 class="book-name">Test Name</h3>
+                <h4 class="book-author">Test Author</h4>
+                <h5 class="status">Read</h5>
+                <div class="actions">
+                    <button class="Mark as Read/Unread" data-edit>Read</button>
+                    <button class="Delete" data-delete>Delete</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>
