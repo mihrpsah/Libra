@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-style: 'sans-serif';
+    
 }
 
 .app{
@@ -19,8 +20,8 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-position: absolute;
-opacity: 0.7;
+    position: absolute;
+    opacity: 0.5;
   } 
   
   .segment-one {
@@ -51,12 +52,18 @@ opacity: 0.7;
 .add-form{
     display: flex;
     flex-direction: column;
+    z-index: 3;
+}
+.segment-one {
+    color: white;
 }
 
 .options{
     display: flex;
     justify-content: space-around;
 }  
+
+
  
 
 
