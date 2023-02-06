@@ -16,6 +16,11 @@ window.addEventListener('load', () =>{
             books.push(book);
             localStorage.setItem('books', JSON.stringify(books));
             console.log(books);
+            DisplayBooks();
      })
 
 })
+
+function DisplayBooks(){
+    
+}
