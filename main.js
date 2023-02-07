@@ -22,5 +22,9 @@ window.addEventListener('load', () =>{
 })
 
 function DisplayBooks(){
-    
+    const segmentTwo = document.querySelector('.segment-two');
+    segmentTwo.innerHTML = '';
+    books.forEach(book => {
+        
+    });
 }
