@@ -20,6 +20,9 @@ window.addEventListener('load', () =>{
             DisplayBooks(books);
      })
 
+     
+
+
 })
 
 function DisplayBooks(books){
@@ -59,6 +62,23 @@ function DisplayBooks(books){
         actions.appendChild(button2);
         bookItem.appendChild(actions);
         segmentTwo.appendChild(bookItem);
+
+        button1.addEventListener('click', e=>{
+            if(book.status == "read"){
+                book.status = "unread";
+                button1.innerHTML = "read";
+                status.innerHTML = "unread";
+            } else{
+                book.status = "read";
+                button1.innerHTML = "unread";
+                status.innerHTML = "read";
+            }
+        })
+        button2.addEventListener('click', e=>{
+            books = books.filter(t => t != book);
+            localStorage.setItem('books', JSON.stringify(books));
+            DisplayTodos(books);
+        })
 
     });
 }
