@@ -8,7 +8,7 @@
 }
 
 .app{
-    border: 2px solid red;
+    
     display: flex;
     flex-direction: column;
 }
@@ -25,7 +25,7 @@
   } 
   
   .segment-one {
-    border: 2px solid orange;
+    
     top: 0;
     left: 0;
     height: 100vh;
@@ -47,7 +47,7 @@
 {
     height: 100vh;
     
-    border: 2px solid green;
+    
 }
 .add-form{
     display: flex;
