@@ -6,9 +6,7 @@ window.addEventListener('load', () =>{
     DisplayBooks(books);
     addBook.addEventListener('submit', (e)=>{
             e.preventDefault();
-            console.log("Log 2")
-            console.log(e.target.elements.book.value);
-            console.log(e.target.elements.status.value);
+            
             const book = {
                 book: e.target.elements.book.value,
                 author: e.target.elements.author.value,
@@ -16,7 +14,7 @@ window.addEventListener('load', () =>{
             }
             books.push(book);
             localStorage.setItem('books', JSON.stringify(books));
-            console.log(books);
+         
             DisplayBooks(books);
      })
 
@@ -26,12 +24,11 @@ window.addEventListener('load', () =>{
 })
 
 function DisplayBooks(books){
-    console.log("In DisplayBook")
-    console.log(books)
+   
     const segmentTwo = document.querySelector('.segment-two');
     segmentTwo.innerHTML = '';
     books.forEach(book => {
-        console.log(book)
+        
         const bookItem = document.createElement('div');
         bookItem.classList.add('book-item');
         const bookName = document.createElement('h3');
@@ -75,8 +72,7 @@ function DisplayBooks(books){
             }
         })
         button2.addEventListener('click', e=>{
-            console.log("In button 2");
-            console.log(books)
+            
             books = books.filter(t => t != book);
             localStorage.setItem('books', JSON.stringify(books));
             DisplayBooks(books);
