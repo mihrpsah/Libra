@@ -75,9 +75,11 @@ function DisplayBooks(books){
             }
         })
         button2.addEventListener('click', e=>{
+            console.log("In button 2");
+            console.log(books)
             books = books.filter(t => t != book);
             localStorage.setItem('books', JSON.stringify(books));
-            DisplayTodos(books);
+            DisplayBooks(books);
         })
 
     });
