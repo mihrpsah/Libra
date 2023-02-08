@@ -83,7 +83,7 @@ input, button{
     justify-content: space-around;
 }
 
-.book{
+.book-item{
     border: 5px;
     background-color: aquamarine;
     border-radius: 20px;
