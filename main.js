@@ -3,7 +3,7 @@ window.addEventListener('load', () =>{
     console.log("Log 1");
     let books = JSON.parse(localStorage.getItem('books')) || [];
     const addBook = document.querySelector("[data-addBook]");
-    
+    DisplayBooks(books);
     addBook.addEventListener('submit', (e)=>{
             e.preventDefault();
             console.log("Log 2")
@@ -44,10 +44,20 @@ function DisplayBooks(books){
         const button2 = document.createElement('button');
         button2.classList.add('Delete');
 
-        bookName.innerHTML = `"${book.book}"`
-        bookAuthor.innerHTML = `"${book.author}"`
+        bookName.innerHTML = `${book.book}`
+        bookAuthor.innerHTML = `${book.author}`
+        status.innerHTML = `${book.status}`
+        if(book.status == "read") button1.innerHTML = "unread";
+        if(book.status == "unread") button1.innerHTML = "read";
+        button2.innerHTML = "Delete";
 
-        bookItem.appendChild(bookName)
+
+        bookItem.appendChild(bookName);
+        bookItem.appendChild(bookAuthor);
+        bookItem.appendChild(status);
+        actions.appendChild(button1);
+        actions.appendChild(button2);
+        bookItem.appendChild(actions);
         segmentTwo.appendChild(bookItem);
 
     });
